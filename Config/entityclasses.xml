@@ -1,0 +1,12 @@
+<SorceryCompatibilityDF>
+	<set xpath="entity_classes/entity_class[@name='sorceryRabbitMaster']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+
+	<set xpath="entity_classes/entity_class[@name='FallenLootContainerFire']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+	<set xpath="entity_classes/entity_class[@name='FallenLootContainerIce']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+	<set xpath="entity_classes/entity_class[@name='FallenLootContainerLightning']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+	<set xpath="entity_classes/entity_class[@name='FallenLootContainerOmni']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+	<set xpath="entity_classes/entity_class[@name='FallenLootContainerChampion']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+
+	<set xpath="entity_classes/entity_class[@name='FallenDeathArcane']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+	<set xpath="entity_classes/entity_class[@name='FallenDeathSoulArcane']/property[@name='TimeStayAfterDeath']/@value">2400</set>
+</SorceryCompatibilityDF>

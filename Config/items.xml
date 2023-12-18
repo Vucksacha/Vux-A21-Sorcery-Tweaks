@@ -1,0 +1,186 @@
+<Vux>
+	<append xpath="/items" >
+		<!-- Vux Elixirs -->
+		<!-- Just adding these to max stats for testing, probably a better way to do it but this is good enough for now -->
+		<!-- ELIXIR: Skill -->
+		<!-- Arcane Elixir -->
+		<item name="sorceryElixir_attSorcery2">
+			<property name="Extends" value="sorceryElixirMaster"/>
+			<property name="CreativeMode" value="All"/>
+			<property name="DisplayType" value=""/>
+			<property name="Meshfile" value="#@modfolder(Sorcery):Resources/potionArcane.unity3d?potionArcane"/>
+			<property name="CustomIcon" value="sorceryElixir_attSorcery"/>
+			<property name="Material" value="MsorceryExtractFire"/><property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<!-- <property name="Unlocks" value="attSorcery"/> -->
+			<property name="UnlockedBy" value="sorceryGrimoire_ElixirSorcery,sorceryAlchemyStation,sorceryRitualStation"/>
+			<property class="Action0">
+					<requirement name="!HasBuff" buff="xpDisable"/>
+					<requirement name="!HasBuff" buff="xpDisable_Sorcery"/>
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="2.0"/>
+				<property name="Sound_start" value="sorceryPotion_consume"/>
+				<property name="Sound_end" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<!-- Transform -->
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+			</effect_group>
+			<effect_group tiered="false" name="INITIAL: Calc">
+				<!-- SET -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="sorceryPotion_consume"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" target="self" action="ModifyCVar" cvar="$sorceryElixir_attSorcery" operation="add" value="1">
+					<requirement name="CVarCompare" cvar="$sorceryElixir_attSorcery" operation="GTE" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="xpElixir_attSorcery2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="sorceryArcaneChant" play_in_head="true"/>
+			</effect_group>
+			<effect_group tiered="false" name="LEVEL MAX: PERMANENT PERKS">
+					<requirement name="CVarCompare" cvar="$attSorcery_Lvl" operation="GTE" value="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_sorceryDamage" operation="add" value="0.005"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_essenceHarvest" operation="add" value="0.01"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="All Sorcery Damage permanently increased [ae92d5]+0.5%[-]"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="All Essence Harvest permanently increased [ae92d5]+1%[-]"/>
+			</effect_group>
+		</item>	
+		<!-- Fire Elixir -->
+		<item name="sorceryElixir_attFire2">
+			<property name="Extends" value="sorceryElixirMaster"/>
+			<property name="CreativeMode" value="All"/>
+			<property name="DisplayType" value=""/>
+			<property name="Meshfile" value="#@modfolder(Sorcery):Resources/potionFire.unity3d?potionFire"/>
+			<property name="CustomIcon" value="sorceryElixir_attFire"/>
+			<property name="Material" value="MsorceryExtractFire"/><property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<!-- <property name="Unlocks" value="attSorceryFire"/> -->
+			<property name="UnlockedBy" value="sorceryGrimoire_ElixirFire,sorceryAlchemyStation,sorceryRitualStation"/>
+			<property class="Action0">
+					<requirement name="!HasBuff" buff="xpDisable"/>
+					<requirement name="!HasBuff" buff="xpDisable_Fire"/>
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="2.0"/>
+				<property name="Sound_start" value="sorceryPotion_consume"/>
+				<property name="Sound_end" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<!-- Transform -->
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+			</effect_group>
+			<effect_group tiered="false" name="INITIAL: Calc">
+				<!-- SET -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="sorceryPotion_consume"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" target="self" action="ModifyCVar" cvar="$sorceryElixir_attFire" operation="add" value="1">
+					<requirement name="CVarCompare" cvar="$sorceryElixir_attFire" operation="GTE" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="xpElixir_attFire2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="sorceryFireball_launch" play_in_head="true"/>
+			</effect_group>
+			<effect_group tiered="false" name="LEVEL MAX: PERMANENT PERKS">
+					<requirement name="CVarCompare" cvar="$attFire_Lvl" operation="GTE" value="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_sorceryFireDamage" operation="add" value="0.005"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_essenceFireHarvest" operation="add" value="0.01"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Fire Sorcery Damage permanently increased [ae92d5]+0.5%[-]"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Fire Essence Harvest permanently increased [ae92d5]+1%[-]"/>
+			</effect_group>
+		</item>	
+		<!-- Ice Elixir -->
+		<item name="sorceryElixir_attIce2">
+			<property name="Extends" value="sorceryElixirMaster"/>
+			<property name="CreativeMode" value="All"/>
+			<property name="DisplayType" value=""/>
+			<property name="Meshfile" value="#@modfolder(Sorcery):Resources/potionIce.unity3d?potionIce"/>
+			<property name="CustomIcon" value="sorceryElixir_attIce"/>
+			<property name="Material" value="MsorceryExtractIce"/><property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<!-- <property name="Unlocks" value="attSorceryIce"/> -->
+			<property name="UnlockedBy" value="sorceryGrimoire_ElixirIce,sorceryAlchemyStation,sorceryRitualStation"/>
+			<property class="Action0">
+					<requirement name="!HasBuff" buff="xpDisable"/>
+					<requirement name="!HasBuff" buff="xpDisable_Ice"/>
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="2.0"/>
+				<property name="Sound_start" value="sorceryPotion_consume"/>
+				<property name="Sound_end" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<!-- Transform -->
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+			</effect_group>
+			<effect_group tiered="false" name="INITIAL: Calc">
+				<!-- SET -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="sorceryPotion_consume"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" target="self" action="ModifyCVar" cvar="$sorceryElixir_attIce" operation="add" value="1">
+					<requirement name="CVarCompare" cvar="$sorceryElixir_attIce" operation="GTE" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="xpElixir_attIce2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="sorceryIce_freeze" play_in_head="true"/>
+			</effect_group>
+			<effect_group tiered="false" name="LEVEL MAX: PERMANENT PERKS">
+					<requirement name="CVarCompare" cvar="$attIce_Lvl" operation="GTE" value="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_sorceryIceDamage" operation="add" value="0.005"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_essenceIceHarvest" operation="add" value="0.01"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Ice Sorcery Damage permanently increased [ae92d5]+0.5%[-]"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Ice Essence Harvest permanently increased [ae92d5]+1%[-]"/>
+			</effect_group>
+		</item>	
+		<!-- Lightning Elixir -->
+		<item name="sorceryElixir_attLightning2">
+			<property name="Extends" value="sorceryElixirMaster"/>
+			<property name="CreativeMode" value="All"/>
+			<property name="DisplayType" value=""/>
+			<property name="Meshfile" value="#@modfolder(Sorcery):Resources/potionLightning.unity3d?potionLightning"/>
+			<property name="CustomIcon" value="sorceryElixir_attLightning"/>
+			<property name="Material" value="MsorceryExtractLightning"/><property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<!-- <property name="Unlocks" value="attSorceryLightning"/> -->
+			<property name="UnlockedBy" value="sorceryGrimoire_ElixirLightning,sorceryAlchemyStation,sorceryRitualStation"/>
+			<property class="Action0">
+					<requirement name="!HasBuff" buff="xpDisable"/>
+					<requirement name="!HasBuff" buff="xpDisable_Lightning"/>
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="2.0"/>
+				<property name="Sound_start" value="sorceryPotion_consume"/>
+				<property name="Sound_end" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<!-- Transform -->
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+			</effect_group>
+			<effect_group tiered="false" name="INITIAL: Calc">
+				<!-- SET -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="sorceryPotion_consume"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" target="self" action="ModifyCVar" cvar="$sorceryElixir_attLightning" operation="add" value="1">
+					<requirement name="CVarCompare" cvar="$sorceryElixir_attLightning" operation="GTE" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="xpElixir_attLightning2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="sorceryLightning_strike" play_in_head="true"/>
+			</effect_group>
+			<effect_group tiered="false" name="LEVEL MAX: PERMANENT PERKS">
+					<requirement name="CVarCompare" cvar="$attLightning_Lvl" operation="GTE" value="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_sorceryLightningDamage" operation="add" value="0.005"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$elixir_essenceLightningHarvest" operation="add" value="0.01"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Lightning Sorcery Damage permanently increased [ae92d5]+0.5%[-]"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Lightning Essence Harvest permanently increased [ae92d5]+1%[-]"/>
+			</effect_group>
+		</item>
+	</append>
+
+	<!-- Let elixirs give the boosts prior to 100 in stat -->
+	<set xpath="/items/item[@name='sorceryElixir_attSorcery' or @name='sorceryElixir_attFire' or @name='sorceryElixir_attIce' or @name='sorceryElixir_attLightning']/effect_group[@name='LEVEL MAX: PERMANENT PERKS']/requirement/@value">1</set>
+</Vux>
