@@ -1,79 +1,101 @@
 <Vux>
 	<append xpath="/buffs" >
 <!-- Sorcery buff elixir to give lots of levels so no need to spam -->
-			<buff name="xpElixir_attSorcery2" hidden="false" icon="uic_xp_sorcery">
-				<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
-				<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
-					<effect_group>
-							<requirement name="!HasBuff" buff="xpDisable"/>
-							<requirement name="!HasBuff" buff="xpDisable_Sorcery"/>
-							<requirement name="CVarCompare" cvar="$attSorcery_Lvl" operation="LT" value="100"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="set" value="@$attSorcery_LvlXP_BaseNew"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd" operation="add" value="@$attSorcery_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd" operation="add" value="@$attSorcery_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attSorcery,lvlXpCalc_attSorcery"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attSorcery,lvlXpCalc_attSorcery"/>
-					</effect_group>
-			</buff>
+		<buff name="xpElixir_attSorcery2" hidden="false" icon="uic_xp_sorcery">
+			<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
+			<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
+				<effect_group>
+						<requirement name="!HasBuff" buff="xpDisable"/>
+						<requirement name="!HasBuff" buff="xpDisable_Sorcery"/>
+						<requirement name="CVarCompare" cvar="$attSorcery_Lvl" operation="LT" value="100"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="set" value="@$attSorcery_LvlXP_BaseNew"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd" operation="add" value="@$attSorcery_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attSorcery_LvlXPAdd" operation="add" value="@$attSorcery_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attSorcery,lvlXpCalc_attSorcery"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attSorcery,lvlXpCalc_attSorcery"/>
+				</effect_group>
+		</buff>
 
+		<buff name="xpElixir_attFire2" hidden="false" icon="uic_xp_sorcery">
+			<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
+			<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
+				<effect_group>
+						<requirement name="!HasBuff" buff="xpDisable"/>
+						<requirement name="!HasBuff" buff="xpDisable_Fire"/>
+						<requirement name="CVarCompare" cvar="$attFire_Lvl" operation="LT" value="100"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="set" value="@$attFire_LvlXP_BaseNew"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd" operation="add" value="@$attFire_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attFire_LvlXPAdd" operation="add" value="@$attFire_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attFire,lvlXpCalc_attFire"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attFire,lvlXpCalc_attFire"/>
+				</effect_group>
+		</buff>
 
+		<buff name="xpElixir_attIce2" hidden="false" icon="uic_xp_sorcery">
+			<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
+			<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
+				<effect_group>
+						<requirement name="!HasBuff" buff="xpDisable"/>
+						<requirement name="!HasBuff" buff="xpDisable_Ice"/>
+						<requirement name="CVarCompare" cvar="$attIce_Lvl" operation="LT" value="100"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="set" value="@$attIce_LvlXP_BaseNew"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd" operation="add" value="@$attIce_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attIce_LvlXPAdd" operation="add" value="@$attIce_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attIce,lvlXpCalc_attIce"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attIce,lvlXpCalc_attIce"/>
+				</effect_group>
+		</buff>
 
-			<buff name="xpElixir_attFire2" hidden="false" icon="uic_xp_sorcery">
-				<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
-				<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
-					<effect_group>
-							<requirement name="!HasBuff" buff="xpDisable"/>
-							<requirement name="!HasBuff" buff="xpDisable_Fire"/>
-							<requirement name="CVarCompare" cvar="$attFire_Lvl" operation="LT" value="100"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="set" value="@$attFire_LvlXP_BaseNew"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attFire_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXPAdd" operation="add" value="@$attFire_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attFire_LvlXPAdd" operation="add" value="@$attFire_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attFire,lvlXpCalc_attFire"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attFire,lvlXpCalc_attFire"/>
-					</effect_group>
-			</buff>
+		<buff name="xpElixir_attLightning2" hidden="false" icon="uic_xp_sorcery">
+			<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
+			<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
+				<effect_group>
+						<requirement name="!HasBuff" buff="xpDisable"/>
+						<requirement name="!HasBuff" buff="xpDisable_Lightning"/>
+						<requirement name="CVarCompare" cvar="$attLightning_Lvl" operation="LT" value="100"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="set" value="@$attLightning_LvlXP_BaseNew"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd" operation="add" value="@$attLightning_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attLightning_LvlXPAdd" operation="add" value="@$attLightning_LvlXPAdd_Elixir"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attLightning,lvlXpCalc_attLightning"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attLightning,lvlXpCalc_attLightning"/>
+				</effect_group>
+		</buff>
 
+		<buff name="vuxMaxSorcery" hidden="false" icon="uic_xp_sorcery">
+			<stack_type value="ignore"/><duration value="1"/><update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifySkills, Sorcery" tag="attSorcery" operation="add" value="99" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_LvlXP" operation="set" value="22128.65"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attSorcery_Lvl" operation="set" value="100"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlAdd_Update"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attSorcerySorcery" level="100"/>
 
-			<buff name="xpElixir_attIce2" hidden="false" icon="uic_xp_sorcery">
-				<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
-				<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
-					<effect_group>
-							<requirement name="!HasBuff" buff="xpDisable"/>
-							<requirement name="!HasBuff" buff="xpDisable_Ice"/>
-							<requirement name="CVarCompare" cvar="$attIce_Lvl" operation="LT" value="100"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="set" value="@$attIce_LvlXP_BaseNew"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attIce_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXPAdd" operation="add" value="@$attIce_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attIce_LvlXPAdd" operation="add" value="@$attIce_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attIce,lvlXpCalc_attIce"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attIce,lvlXpCalc_attIce"/>
-					</effect_group>
-			</buff>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_LvlXP" operation="set" value="5480.0461258"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attFire_Lvl" operation="set" value="100"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attSorceryFire" level="100"/>
 
-			<buff name="xpElixir_attLightning2" hidden="false" icon="uic_xp_sorcery">
-				<!-- <stack_type value="ignore"/><duration value="0.1"/> -->
-				<stack_type value="ignore"/><duration value="600"/><update_rate value="6"/>
-					<effect_group>
-							<requirement name="!HasBuff" buff="xpDisable"/>
-							<requirement name="!HasBuff" buff="xpDisable_Lightning"/>
-							<requirement name="CVarCompare" cvar="$attLightning_Lvl" operation="LT" value="100"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="set" value="@$attLightning_LvlXP_BaseNew"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="multiply" value=".20"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attLightning_LvlXPAdd_Elixir" operation="add" value="5000.00"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXPAdd" operation="add" value="@$attLightning_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$attLightning_LvlXPAdd" operation="add" value="@$attLightning_LvlXPAdd_Elixir"/>
-						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="lvlXpUI_attLightning,lvlXpCalc_attLightning"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="lvlXpUI_attLightning,lvlXpCalc_attLightning"/>
-					</effect_group>
-			</buff>
-	</append>		
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_LvlXP" operation="set" value="5480.0461258"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attIce_Lvl" operation="set" value="100"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attSorceryIce" level="100"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_LvlXP" operation="set" value="5480.0461258"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$attLightning_Lvl" operation="set" value="100"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attSorceryLightning" level="100"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="spellFX_LevelFire"/>
+			</effect_group>
+		</buff>
+	</append>
 </Vux>

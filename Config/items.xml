@@ -179,6 +179,41 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Lightning Essence Harvest permanently increased [ae92d5]+1%[-]"/>
 			</effect_group>
 		</item>
+
+		<!-- Vux Elixir -->
+		<item name="sorceryElixir_Vux">
+			<property name="Extends" value="sorceryElixirMaster"/>
+			<property name="CreativeMode" value="All"/>
+			<property name="DisplayType" value=""/>
+			<property name="Meshfile" value="#@modfolder(Sorcery):Resources/potionLightning.unity3d?potionLightning"/>
+			<property name="CustomIcon" value="sorceryElixir_attLightning"/>
+			<property name="Material" value="MsorceryExtractLightning"/><property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<!-- <property name="Unlocks" value="attSorceryLightning"/> -->
+			<property name="UnlockedBy" value="sorceryGrimoire_ElixirLightning,sorceryAlchemyStation,sorceryRitualStation"/>
+			<property class="Action0">
+					<requirement name="!HasBuff" buff="xpDisable"/>
+					<requirement name="!HasBuff" buff="xpDisable_Lightning"/>
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Use_time" value="2.0"/>
+				<property name="Sound_start" value="sorceryPotion_consume"/>
+				<property name="Sound_end" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<!-- Transform -->
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Elixir"/>
+			</effect_group>
+			<effect_group tiered="false" name="INITIAL: Calc">
+				<!-- SET -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="sorceryPotion_consume"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="vuxMaxSorcery"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="sorceryLightning_strike" play_in_head="true"/>
+			</effect_group>
+		</item>
 	</append>
 
 	<!-- Let elixirs give the boosts prior to 100 in stat -->
