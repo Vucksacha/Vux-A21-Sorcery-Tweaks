@@ -1,0 +1,37 @@
+<Vux>
+	<append xpath="/quests">
+		<quest id="test_turnin_sorc">
+			<property name="name_key" value="Turn In Quest - Sorc"/>
+			<property name="subtitle_key" value="Talk to Trader"/>
+			<property name="description_key" value=""/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="offer_key" value="Test Turn in"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="reward_choices_count" value="5" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="statement_key" value="Those pesky witches need to be stopped."/>
+			<property name="response_key" value="I could look into the pesky witches."/>
+			<property name="completion_key" value="WELL I'LL BE DANGED. YOU REALLY MANAGED TO PULL THROUGH IN A PINCH. I NEVER THOUGHT I'D SEE THIS WAND AGAIN. GOOD WORK, SON. HERE'S WHAT I OWE YA."/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="1"/>
+			</objective>
+
+			<!-- <reward type="Skill" id="Influence" value="1000000"/> -->
+			<reward type="Exp" value="2500"/>
+
+			<reward type="LootItem" id="sorceryQuestCurrency2" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="sorceryRunes" ischosen="true" value="2"/>
+			<reward type="LootItem" id="sorceryPotions" ischosen="true" value="2"/>
+			<reward type="LootItem" id="sorceryBooksScrolls" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSorceryArmorArcane,groupQuestSorceryArmorFire,groupQuestSorceryArmorIce,groupQuestSorceryArmorLightning" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSorceryWeaponsFire,groupQuestSorceryWeaponsIce,groupQuestSorceryWeaponsLightning" ischosen="true" value="2"/>
+			<reward type="LootItem" id="sorceryQuestFireSpellAmmo,sorceryQuestIceSpellAmmo,sorceryQuestLightningSpellAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="sorceryQuestResources" ischosen="true" value="2"/>
+		</quest>
+	</append>
+</Vux>
