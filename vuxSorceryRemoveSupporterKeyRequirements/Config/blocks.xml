@@ -1,0 +1,14 @@
+<Vux>
+    <set xpath="//block[@name='sorceryRitualStation']/property[@name='UnlockedBy']/@value">perkSorceryShrineMastery,sorceryGrimoire_StationRitual</set>
+    <!-- <set xpath="//block[@name='treeGrowingMaster_Essence']/property[@name='UnlockedBy']/@value">sorceryDesk</set> -->
+    <!-- <set xpath="//block[@name='treeElementalMasterGrowing']/property[@name='UnlockedBy']/@value">sorceryDesk</set> -->
+    <set xpath="//block[@name='shrineMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='shrineBareMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='shrineFireMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='shrineFireBareMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='shrineIceMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='shrineIceBareMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='shrineLightningMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='shrineLightningBareMaster']/property[@name='UnlockedBy']/@value">sorceryRitualStation</set>
+    <set xpath="//block[@name='portalRecall']/property[@name='UnlockedBy']/@value">sorceryDesk</set>
+</Vux>
