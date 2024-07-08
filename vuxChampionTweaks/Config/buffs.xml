@@ -7,6 +7,7 @@
             <triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="$sorceryChampionSpawnChance" operation="add" value="1">
                 <requirement name="TriggerHasTags" tags="cluster"/>
                 <requirement name="ItemHasTags" tags="wandHarvest,staff"/>
+                <requirement name="RandomRoll" seed_type="Random" min_max="0,5" operation="LTE" value="1"/>
             </triggered_effect>
         </effect_group>
     </insertBefore>
