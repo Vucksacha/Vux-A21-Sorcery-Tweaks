@@ -2,7 +2,7 @@
 <xml>
 	<ModInfo>
 		<Name value="Vux Sorcery Tweaks - Champion tweaks" />
-		<Description value="Add a visible buff for champion spawn CD" />
+		<Description value="Add a visible buff for champion spawn CD and increase the odds of a champion spawning based off something" />
 		<Author value="Vux" />
 		<Version value="Sorcery 1.942" />
 		<Website value="TBA" />

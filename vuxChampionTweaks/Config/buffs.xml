@@ -1,3 +1,19 @@
 <Vux>
     <set xpath="//buff[@name='event_FallenBossSpawnTimed']/@hidden">false</set>
+
+    <!-- Each time a crystal cluster is damaged, compare the randomroll thing against a cvar? or make the value a cvar. Then, make that cvar increase with each hit -->
+    <insertBefore xpath="//buff[@name='buffSorceryManage']/effect_group[@name='CLUSTER: EVENT']">
+        <effect_group name="CLUSTER: EVENT TWEAKS">
+            <triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="$sorceryChampionSpawnChance" operation="add" value="1">
+                <requirement name="TriggerHasTags" tags="cluster"/>
+                <requirement name="ItemHasTags" tags="wandHarvest,staff"/>
+            </triggered_effect>
+        </effect_group>
+    </insertBefore>
+
+    <set xpath="//buff[@name='buffSorceryManage']/effect_group[@name='CLUSTER: EVENT']/triggered_effect/requirement[@name='RandomRoll']/@value">@$sorceryChampionSpawnChance</set>
+
+    <append xpath="//buff[@name='event_FallenBossSpawnTimed']/effect_group[@name='EVENT']">
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$sorceryChampionSpawnChance" operation="set" value="1"/>
+    </append>
 </Vux>
