@@ -1,0 +1,3 @@
+<Vux>
+    <set xpath="//buff[@name='event_FallenBossSpawnTimed']/@hidden">false</set>
+</Vux>
