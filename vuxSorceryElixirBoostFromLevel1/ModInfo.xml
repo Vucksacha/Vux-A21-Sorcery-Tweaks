@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Vux Sorcery Tweaks - Elixir Boost From Level 1" />
+		<Description value="Allow Sorcery elixirs to apply their damage and essence find boosts prior to level 100" />
+		<Author value="Vux" />
+		<Version value="Sorcery 1.942" />
+		<Website value="TBA" />
+	</ModInfo>
+</xml>

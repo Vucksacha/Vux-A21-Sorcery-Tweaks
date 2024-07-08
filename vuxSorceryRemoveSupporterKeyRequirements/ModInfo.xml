@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Vux Sorcery Tweaks - Remove Supporter Key Crafting Requirement" />
+		<Description value="Remove the requirement of needing to use a supporter key for crafting certain items" />
+		<Author value="Vux" />
+		<Version value="Sorcery 1.942" />
+		<Website value="TBA" />
+	</ModInfo>
+</xml>
