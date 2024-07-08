@@ -1,0 +1,9 @@
+<Vux>
+    <set xpath="//item_modifier[@name='runeMaster_Class']/UnlockedBy/@value">perkSorceryRuneMastery</set>
+    <set xpath="//item_modifier[@name='rune_Traveler']/UnlockedBy/@value">perkSorceryRuneMastery</set>
+    <set xpath="//item_modifier[@name='rune_DeeperPocket']/UnlockedBy/@value">perkSorceryRuneMastery</set>
+    <set xpath="//item_modifier[@name='rune_ArcaneVision']/UnlockedBy/@value">perkSorceryRuneMastery</set>
+    <set xpath="//item_modifier[@name='rune_Indestructible']/UnlockedBy/@value">perkSorceryRuneMastery</set>
+    <set xpath="//item_modifier[@name='rune_SupporterAstryael']/UnlockedBy/@value">perkSorceryRuneMastery</set>
+    <set xpath="//item_modifier[@name='rune_SupporterDragoness']/UnlockedBy/@value">perkSorceryRuneMastery</set>
+</Vux>
