@@ -98,4 +98,13 @@
 			</effect_group>
 		</buff>
 	</append>
+
+	<!-- Remove supporter key req for crafting -->
+	<!-- <remove xpath="//buff[@name='buffSorcerySupportPerkFree']/effect_group[@name='FAMILIAR: LEGENDARY']/requirement[@cvar='$sorcerySupportFree']"/>
+	<remove xpath="//buff[@name='buffSorcerySupportPerkFree']/effect_group[@name='SCROLLS: RARE']/requirement[@cvar='$sorcerySupportFree']"/>
+	<remove xpath="//buff[@name='buffSorcerySupportPerkFree']/effect_group[@name='SCROLLS: LEGENDARY']/requirement[@cvar='$sorcerySupportFree']"/>
+	<remove xpath="//buff[@name='buffSorcerySupportPerkFree']/effect_group[@name='RUNES: CLASS']/requirement[@cvar='$sorcerySupportFree']"/>
+	<remove xpath="//buff[@name='buffSorcerySupportPerkFree']/effect_group[@name='RUNES: RARE']/requirement[@cvar='$sorcerySupportFree']"/>
+	<remove xpath="//buff[@name='buffSorcerySupportPerkFree']/effect_group[@name='RUNES: LEGENDARY']/requirement[@cvar='$sorcerySupportFree']"/>
+	<remove xpath="//buff[@name='buffSorcerySupportPerkFree']/effect_group[@name='POTIONS: MASTER']/requirement[@cvar='$sorcerySupportFree']"/> -->
 </Vux>

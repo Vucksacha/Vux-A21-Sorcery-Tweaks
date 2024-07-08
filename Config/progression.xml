@@ -1,0 +1,23 @@
+<Vux>
+<!-- Remove supporter key reqs -->        
+    <!-- <append xpath="//perk[@name='perkSorcerySummonFamiliarMastery']/effect_group[@name='CRAFTING]">
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="10" tags="book_SummonFamiliars"/>
+    </append>
+        
+    <append xpath="//perk[@name='perkSorceryScrollMastery']/effect_group[@name='CRAFTING]">
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="6,10" tags="scroll_Recall,scroll_TeleportLandclaim,scroll_TeleportBackpack"/>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="10" tags="incantation_SummonOmniPack,incantation_SummonElementalOmni"/>
+    </append> -->
+
+    <append xpath="/progression/perks/perk[@name='perkSorceryRuneMastery']/effect_group[@name='RUNECRAFTING: CRAFTING]">
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,10" tags="rune_ClassSpellcaster1,rune_ClassSpellcaster2,rune_ClassSpellcaster3,rune_ClassSpellGunner1,rune_ClassSpellGunner2,rune_ClassSpellGunner3,rune_ClassSpellArcher1,rune_ClassSpellArcher2,rune_ClassSpellArcher3,rune_ClassSpellKnight1,rune_ClassSpellKnight2,rune_ClassSpellKnight3,rune_ClassSpellTrapper1,rune_ClassSpellTrapper2,rune_ClassSpellTrapper3,rune_ClassAlchemist1,rune_ClassAlchemist2,rune_ClassAlchemist3,rune_ClassEnchanter1,rune_ClassEnchanter2,rune_ClassEnchanter3,rune_ClassScholar1,rune_ClassScholar2,rune_ClassScholar3,rune_ClassTailor1,rune_ClassTailor2,rune_ClassTailor3,rune_ClassRitualist1,rune_ClassRitualist2,rune_ClassRitualist3,rune_ClassSummoner1,rune_ClassSummoner2,rune_ClassSummoner3"/>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="6,10" tags="rune_Traveler"/>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="10" tags="rune_SupporterAstryael,rune_SupporterDragoness,rune_DeeperPocket,rune_ArcaneVision,rune_Indestructible"/>
+    </append>
+
+    <!-- <append xpath="//perk[@name='perkSorceryAlchemyMastery']/effect_group[@name='CRAFTING]">
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="10" tags="potion_Lifeforce"/>
+    </append> -->
+
+    <!-- Is special required? lines 2533 onwards -->
+</Vux>
