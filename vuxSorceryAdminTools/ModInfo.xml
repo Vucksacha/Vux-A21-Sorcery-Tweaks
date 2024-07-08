@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Vux Sorcery Tweaks - Admin Tools" />
+		<Description value="Add in various admin tools for Sorcery, such as elixirs for maxing sorcery stats and a test quest" />
+		<Author value="Vux" />
+		<Version value="Sorcery 1.942" />
+		<Website value="TBA" />
+	</ModInfo>
+</xml>

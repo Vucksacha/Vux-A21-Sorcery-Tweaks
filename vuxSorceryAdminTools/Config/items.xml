@@ -215,7 +215,4 @@
 			</effect_group>
 		</item>
 	</append>
-
-	<!-- Let elixirs give the boosts prior to 100 in stat -->
-	<set xpath="/items/item[@name='sorceryElixir_attSorcery' or @name='sorceryElixir_attFire' or @name='sorceryElixir_attIce' or @name='sorceryElixir_attLightning']/effect_group[@name='LEVEL MAX: PERMANENT PERKS']/requirement/@value">1</set>
 </Vux>
