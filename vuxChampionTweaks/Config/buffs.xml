@@ -1,5 +1,8 @@
 <Vux>
     <set xpath="//buff[@name='event_FallenBossSpawnTimed']/@hidden">false</set>
+    <setattribute xpath="//buff[@name='event_FallenBossSpawnTimed']" name="showonhud">true</setattribute>
+    <setattribute xpath="//buff[@name='event_FallenBossSpawnTimed']" name="icon">ui_sorcery_boss</setattribute>
+    <setattribute xpath="//buff[@name='event_FallenBossSpawnTimed']" name="icon_color">255,0,0</setattribute>
 
     <!-- Each time a crystal cluster is damaged, compare the randomroll thing against a cvar? or make the value a cvar. Then, make that cvar increase with each hit -->
     <insertBefore xpath="//buff[@name='buffSorceryManage']/effect_group[@name='CLUSTER: EVENT']">
