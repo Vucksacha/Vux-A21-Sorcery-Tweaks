@@ -1,0 +1,4 @@
+<Vux>
+    <set xpath="//item[@name='resourceCrystalMaster']/property[@class='Action0']/property[@name='Create_item_count']/@value">11000</set>
+    <set xpath="//item[@name='resourceCrystalArcane']/property[@class='Action0']/property[@name='Create_item_count']/@value">11000,11000,11000</set>
+</Vux>

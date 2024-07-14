@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Vux Sorcery Tweaks - Essence crystal tweaks" />
+		<Description value="Increase the amount of essence opening a crystal gives to match the amount it costs to craft" />
+		<Author value="Vux" />
+		<Version value="Sorcery 1.942" />
+		<Website value="TBA" />
+	</ModInfo>
+</xml>
